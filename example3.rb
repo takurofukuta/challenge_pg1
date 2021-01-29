@@ -12,24 +12,36 @@ puts <<~TEXT
      TEXT
 
 while true
-    print "プランの番号を選択 >"
-    plan_num = gets.to_i
-    break if (1..3).include?(plan_num)
-    puts "1~3から選択してください"
+  print "プランの番号を選択 >"
+  plan_num = gets.to_i
+  break if (1..3).include?(plan_num)
+  puts "1~3から選択してください"
 end
 
-if plan_num === 1
-  plan_name = "沖縄旅行"
+# if plan_num === 1
+#   plan_place = "沖縄旅行"
+#   plan_price = 10000
+# elsif plan_num === 2
+#   plan_place = "北海道旅行"
+#   plan_price = 20000
+# elsif plan_num === 3
+#   plan_place = "九州旅行"
+#   plan_price = 15000
+# end
+
+case plan_num
+when 1 then
+  plan_place = "沖縄旅行"
   plan_price = 10000
-elsif plan_num === 2
-  plan_name = "北海道旅行"
+when 2 then
+  plan_place = "北海道旅行"
   plan_price = 20000
-elsif plan_num === 3
-  plan_name = "九州旅行"
+when 3 then
+  plan_place = "九州旅行"
   plan_price = 15000
 end
 
-puts "#{plan_name}ですね。"
+puts "#{plan_place}ですね。"
 
 puts "何名で予約されますか？"
 
